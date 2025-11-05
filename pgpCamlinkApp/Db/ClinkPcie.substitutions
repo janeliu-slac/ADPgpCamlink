@@ -1,0 +1,12 @@
+# Substitution and include directives moved from ClinkPcie.template
+
+file "putMonitor.template" {
+    pattern
+    {
+        SER_OK_PV, MON_SCAN, MON_DISABLED, MON_VALUE, MON_PV
+        "$(P)$(R)AxiPcieCore:PCIE_HW_TYPE_G", "1 second", "1", "1", "$(P)$(R)Timing:ClkSel"
+        "$(P)$(R)AxiPcieCore:PCIE_HW_TYPE_G", "1 second", "1", "1", "$(P)$(R)Timing:ModeSel"
+        "$(P)$(R)AxiPcieCore:PCIE_HW_TYPE_G", "1 second", "1", "1", "$(P)$(R)Timing:ModeSelEn"
+        "$(P)$(R)AxiPcieCore:PCIE_HW_TYPE_G", "1 second", "1", "1", "$(P)$(R)XpmMini:Config_L0Select_RateSel"
+    }
+}
