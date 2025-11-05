@@ -186,17 +186,3 @@ record( longout, "$(P)$(R)Timing:RxPllReset" )
 	field( OUT,  "@B$(B) L0 ClinkDevRoot.ClinkPcie.Hsio.TimingRx.TimingFrameRx.RxPllReset" )
 	field( FLNK, "$(P)$(R)Timing:RxPllReset_RBV" )
 }
-
-# Put monitors
-substitute "SER_OK_PV=$(P)$(R)AxiPcieCore:PCIE_HW_TYPE_G"
-substitute "MON_SCAN=1 second"
-substitute "MON_DISABLED=1"
-substitute "MON_VALUE=1"
-substitute "MON_PV=$(P)$(R)Timing:ClkSel"
-include "putMonitor.template"
-substitute "MON_PV=$(P)$(R)Timing:ModeSel"
-include "putMonitor.template"
-substitute "MON_PV=$(P)$(R)Timing:ModeSelEn"
-include "putMonitor.template"
-substitute "MON_PV=$(P)$(R)XpmMini:Config_L0Select_RateSel"
-include "putMonitor.template"
