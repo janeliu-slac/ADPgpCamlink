@@ -29,6 +29,9 @@ DB += PgpChCannedSequences.db
 DB += CamCannedSequences.db
 DB += ClinkFebPll.db
 
+DB_INSTALLS += $(TOP)/pgpCamlinkApp/Db/ClinkPcie.template
+DB_INSTALLS += $(TOP)/pgpCamlinkApp/Db/ClinkPcie.substitutions
+
 # Install archive files
 #ARCHIVE += foo.tpl-arch
 ARCHIVE += pgpCamlinkBase.tpl-arch
